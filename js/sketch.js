@@ -1,21 +1,30 @@
 
-
+var boxInt = 16;
+var boxNum = 256;
+var boxSize = 50;
 
 function genBoxes(boxInt) {
-	var boxSize = 800 / boxInt;
-	var boxNum = boxInt * boxInt;
-	var boxInt = 16;
-	var cont = [];
+	boxSize = 800 / boxInt;
+	boxNum = boxInt * boxInt;
+	cont = [];
 	console.log(boxNum);
+
+// New method to generate grid from js - way better (duh).
+
+	$('#boxWrap').empty();
 	for (var i = 0; i < boxNum; i++) {
-		cont.push('<div class="box"></div>');
-		$('#boxWrap').html(cont.join(''));
+		$('#boxWrap').append('<div class="box"></div>');
 	};
 
-	$('.box').css({
-		height: boxSize + 'px',
-		width: boxSize + 'px'
-	});
+// Old method, too resource-intensive to generate more than 32x32
+
+	// for (var i = 0; i < boxNum; i++) {
+	// 	cont.push('<div class="box"></div>');
+	// 	$('#boxWrap').html(cont.join(''));
+	// };
+
+	$('.box').height(boxSize);
+	$('.box').width(boxSize);
 
 	$('.box').hover(function() {
 		$(this).addClass('boxHover');
@@ -26,13 +35,14 @@ function genBoxes(boxInt) {
 
 
 function clearScreen() {
-	boxInt = prompt("How many boxes per side?", '16');
+	boxInt = prompt("How many dots per side?", '16');
 	genBoxes(boxInt);
 };
 
 $(document).ready(function() {
 	$("#createButton").click(function() {
-		genBoxes(boxInt);
+		genBoxes(16);
+		$("#createButton").text('Start Over!');
 	});	
 
 	$("#clearButton").click(function() {

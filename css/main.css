@@ -7,14 +7,13 @@ and generates new <div>s, up to max of 16 */
 
 #boxWrap {
 margin: 0 auto; 
-width: 800px;
-height: 800px;
+width: 804px;
+height: 804px;
 position: relative;
+border: 2px solid black;
 }
-/*Bypass margin issue by making them circles.*/
+
 .box {
-	height: 50px;
-	width: 50px; 
 	background-color: #eee;
 	box-shadow: 3px 3px 2px #666;
 	float: left;
