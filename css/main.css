@@ -11,15 +11,14 @@ width: 800px;
 height: 800px;
 position: relative;
 }
-
+/*Bypass margin issue by making them circles.*/
 .box {
 	height: 50px;
-	width: 50px;
-	margin: 0px;
-	padding: -2px;
+	width: 50px; 
 	background-color: #eee;
 	box-shadow: 3px 3px 2px #666;
 	float: left;
+	border-radius: 100%;
 }
 .boxHover {
 	background-color: #aaa;
