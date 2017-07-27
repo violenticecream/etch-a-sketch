@@ -1,0 +1,47 @@
+/* Somehow make a button that sits in center 
+and generates new <div>s, up to max of 16 */
+#wrapper {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#boxWrap {
+margin: 0 auto; 
+width: 800px;
+height: 800px;
+position: relative;
+}
+
+.box {
+	height: 50px;
+	width: 50px;
+	margin: 0px;
+	padding: -2px;
+	background-color: #eee;
+	box-shadow: 3px 3px 2px #666;
+	float: left;
+}
+.boxHover {
+	background-color: #aaa;
+}
+#containButton {
+	text-align: center;
+}
+
+#createButton {
+	margin: 5px;
+	padding: 4px 8px;
+	box-shadow: 2px 2px 2px #aaa;
+	text-align: center;
+	font-size: 2em;
+	float: left;
+}
+
+#clearButton {
+	margin: 5px;
+	padding: 4px 8px;
+	box-shadow: 2px 2px 2px #aaa;
+	text-align: center;
+	font-size: 2em;
+	float: right;
+}
